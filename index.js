@@ -62,14 +62,46 @@
  *? це число (у першу, другу, третю чи четверту).
  */
 
-const min = 15;
-function time(number) {
-  if (number <= 15) {
-    return 1;
-  } else if (number > 15 && number <= 30) {
-    return 2;
-  } else if (number > 30 && number <= 45) {
-    return 3;
-  } else return 4;
+// const min = 15;
+// function time(number) {
+//   if (number <= 15) {
+//     return 1;
+//   } else if (number > 15 && number <= 30) {
+//     return 2;
+//   } else if (number > 30 && number <= 45) {
+//     return 3;
+//   } else return 4;
+// }
+// console.log(time(min));
+
+/**
+*? Напишіть код, який запитуватиме
+*? логін за допомогою prompt та логувати результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Адмін",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Скасовано"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевіряти так:
+*? Якщо введено пароль "Я головний",
+*? то вивести рядок "Здрастуйте!"
+*? інакше виводити рядок "Невірний пароль!"
+ */
+
+const login = prompt("Введіть логін");
+console.log(login);
+if (login === "Адмін") {
+  const password = prompt("Пароль");
+  if (password === "Я головний") {
+    alert("Здрастуйте!");
+  } else {
+    alert("Невірний пароль!");
+  }
+} else if (login === "" || login === null) {
+  alert("Скасовано");
+} else {
+  alert("Я вас не знаю");
 }
-console.log(time(min));
