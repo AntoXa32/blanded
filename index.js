@@ -43,15 +43,33 @@
 //   повертати true, якщо вік дорослий, і false в іншому випадку.Викличте цю функцію, передаючи змінну "userAge",
 //   і виведіть результат в консоль.
 
-const userAge = 35;
+// const userAge = 35;
+// // function checkAge(age) {
+// //   if (age >= 18) {
+// //     return true;
+// //   } else {
+// //     return false;
+// //   }
+// // }
 // function checkAge(age) {
-//   if (age >= 18) {
-//     return true;
-//   } else {
-//     return false;
-//   }
+//   return age >= 18;
 // }
-function checkAge(age) {
-  return age >= 18;
+// console.log("🚀 ~ checkAge:", checkAge(userAge));
+
+/**
+ *? У змінній min лежить число від 0 до 59.
+ *? Визначте, в яку чверть години потрапляє
+ *? це число (у першу, другу, третю чи четверту).
+ */
+
+const min = 15;
+function time(number) {
+  if (number <= 15) {
+    return 1;
+  } else if (number > 15 && number <= 30) {
+    return 2;
+  } else if (number > 30 && number <= 45) {
+    return 3;
+  } else return 4;
 }
-console.log("🚀 ~ checkAge:", checkAge(userAge));
+console.log(time(min));
